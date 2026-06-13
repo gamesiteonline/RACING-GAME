@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a2e"/>
+      <stop offset="100%" stop-color="#1a0a3e"/>
+    </linearGradient>
+    <linearGradient id="roadG" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2a2a3a"/>
+      <stop offset="100%" stop-color="#1a1a2a"/>
+    </linearGradient>
+    <linearGradient id="nitroFlame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6a00"/>
+      <stop offset="50%" stop-color="#ee0979"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Stars -->
+  <circle cx="100" cy="30" r="1.5" fill="#fff" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2s" repeatCount="indefinite"/></circle>
+  <circle cx="250" cy="50" r="1" fill="#fff" opacity="0.4"><animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/></circle>
+  <circle cx="500" cy="25" r="1.5" fill="#fff" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="2.5s" repeatCount="indefinite"/></circle>
+  <circle cx="650" cy="45" r="1" fill="#fff" opacity="0.3"><animate attributeName="opacity" values="0.3;0.1;0.3" dur="1.8s" repeatCount="indefinite"/></circle>
+  <circle cx="720" cy="20" r="1.5" fill="#fff" opacity="0.5"><animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.2s" repeatCount="indefinite"/></circle>
+
+  <!-- Moon -->
+  <circle cx="680" cy="60" r="20" fill="#ffd700" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- City skyline -->
+  <rect x="0" y="150" width="30" height="100" fill="#0a0a1a"/>
+  <rect x="35" y="120" width="25" height="130" fill="#111122"/>
+  <rect x="65" y="140" width="20" height="110" fill="#0a0a1a"/>
+  <rect x="100" y="110" width="35" height="140" fill="#111122"/>
+  <rect x="140" y="130" width="25" height="120" fill="#0a0a1a"/>
+  <rect x="650" y="140" width="20" height="110" fill="#111122"/>
+  <rect x="680" y="120" width="30" height="130" fill="#0a0a1a"/>
+  <rect x="720" y="100" width="25" height="150" fill="#111122"/>
+  <rect x="755" y="130" width="45" height="120" fill="#0a0a1a"/>
+
+  <!-- Windows glow -->
+  <rect x="40" y="125" width="4" height="4" fill="#ffff44" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/></rect>
+  <rect x="50" y="140" width="4" height="4" fill="#44ff44" opacity="0.4"/>
+  <rect x="110" y="115" width="4" height="4" fill="#ff4444" opacity="0.5"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite"/></rect>
+  <rect x="120" y="130" width="4" height="4" fill="#ffff44" opacity="0.3"/>
+  <rect x="690" y="125" width="4" height="4" fill="#44ffff" opacity="0.5"/>
+
+  <!-- Ground -->
+  <rect x="0" y="250" width="800" height="250" fill="#0a0a12"/>
+
+  <!-- Road -->
+  <rect x="100" y="260" width="600" height="220" rx="5" fill="url(#roadG)"/>
+  <rect x="100" y="260" width="600" height="220" rx="5" fill="none" stroke="#333" stroke-width="2"/>
+
+  <!-- Road markings scrolling -->
+  <line x1="400" y1="270" x2="400" y2="290" stroke="#ffdd00" stroke-width="2" opacity="0.6">
+    <animate attributeName="y1" from="270" to="470" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" from="290" to="490" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="400" y1="300" x2="400" y2="320" stroke="#ffdd00" stroke-width="2" opacity="0.6">
+    <animate attributeName="y1" from="300" to="500" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" from="320" to="520" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="400" y1="330" x2="400" y2="350" stroke="#ffdd00" stroke-width="2" opacity="0.6">
+    <animate attributeName="y1" from="330" to="530" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" from="350" to="550" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+  <line x1="400" y1="360" x2="400" y2="380" stroke="#ffdd00" stroke-width="2" opacity="0.6">
+    <animate attributeName="y1" from="360" to="560" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="y2" from="380" to="580" dur="1.5s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Road edges -->
+  <line x1="110" y1="260" x2="110" y2="480" stroke="#ff4444" stroke-width="3" opacity="0.4"/>
+  <line x1="690" y1="260" x2="690" y2="480" stroke="#ff4444" stroke-width="3" opacity="0.4"/>
+
+  <!-- Player car (center, chasing view) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 0,0" dur="0.1s"/>
+    <!-- Car body -->
+    <rect x="340" y="370" width="120" height="50" rx="8" fill="#ff0044"/>
+    <rect x="350" y="375" width="100" height="15" rx="4" fill="#111122" opacity="0.8"/>
+    <rect x="345" y="385" width="110" height="8" rx="3" fill="#4488cc" opacity="0.5"/>
+    <!-- Wheels -->
+    <circle cx="355" cy="425" r="8" fill="#111"/>
+    <circle cx="355" cy="425" r="4" fill="#666"/>
+    <circle cx="445" cy="425" r="8" fill="#111"/>
+    <circle cx="445" cy="425" r="4" fill="#666"/>
+    <!-- Spoiler -->
+    <rect x="345" y="365" width="115" height="4" rx="2" fill="#222"/>
+    <!-- Nitro flame -->
+    <rect x="455" y="385" width="30" height="8" rx="3" fill="url(#nitroFlame)" filter="url(#glow)">
+      <animate attributeName="width" values="20;40;20" dur="0.3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Speed lines -->
+    <line x1="460" y1="370" x2="520" y2="370" stroke="#ff6a00" stroke-width="1" opacity="0.4">
+      <animate attributeName="x2" values="520;560;520" dur="0.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="460" y1="420" x2="530" y2="420" stroke="#ff6a00" stroke-width="1" opacity="0.3">
+      <animate attributeName="x2" values="530;570;530" dur="0.25s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- AI car 1 (ahead) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; 30,-60; 0,0" dur="6s" repeatCount="indefinite"/>
+    <rect x="360" y="290" width="100" height="40" rx="6" fill="#4488ff"/>
+    <rect x="370" y="295" width="80" height="12" rx="3" fill="#111122" opacity="0.8"/>
+    <circle cx="375" cy="335" r="6" fill="#111"/>
+    <circle cx="375" cy="335" r="3" fill="#666"/>
+    <circle cx="445" cy="335" r="6" fill="#111"/>
+    <circle cx="445" cy="335" r="3" fill="#666"/>
+  </g>
+
+  <!-- AI car 2 (behind) -->
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0,0; -20,40; 0,0" dur="5s" repeatCount="indefinite"/>
+    <rect x="370" y="440" width="90" height="36" rx="6" fill="#ffd700"/>
+    <rect x="378" y="445" width="74" height="10" rx="3" fill="#111122" opacity="0.8"/>
+    <circle cx="383" cy="480" r="6" fill="#111"/>
+    <circle cx="383" cy="480" r="3" fill="#666"/>
+    <circle cx="448" cy="480" r="6" fill="#111"/>
+    <circle cx="448" cy="480" r="3" fill="#666"/>
+  </g>
+
+  <!-- Side barriers -->
+  <rect x="95" y="260" width="8" height="220" fill="#ff6600" opacity="0.3"/>
+  <rect x="697" y="260" width="8" height="220" fill="#ff6600" opacity="0.3"/>
+
+  <!-- Street lights -->
+  <g><rect x="85" y="240" width="4" height="20" fill="#555"/><circle cx="87" cy="238" r="4" fill="#ffdd44" filter="url(#glow)"/></g>
+  <g><rect x="711" y="240" width="4" height="20" fill="#555"/><circle cx="713" cy="238" r="4" fill="#ffdd44" filter="url(#glow)"/></g>
+
+  <!-- HUD overlay -->
+  <rect x="10" y="10" width="180" height="60" rx="8" fill="rgba(0,0,0,0.6)" stroke="#ff6a00" stroke-width="1"/>
+  <text x="20" y="30" font-family="monospace" font-size="10" fill="#888">SPEED</text>
+  <text x="70" y="30" font-family="monospace" font-size="14" font-weight="bold" fill="#fff">
+    284
+    <animate attributeName="fill" values="#fff;#ff6a00;#fff" dur="2s" repeatCount="indefinite"/>
+  </text>
+  <text x="20" y="48" font-family="monospace" font-size="10" fill="#888">POSITION</text>
+  <text x="80" y="48" font-family="monospace" font-size="14" font-weight="bold" fill="#44ff44">1st</text>
+  <text x="20" y="64" font-family="monospace" font-size="10" fill="#888">KM/H</text>
+
+  <!-- Nitro meter -->
+  <rect x="200" y="20" width="150" height="16" rx="4" fill="rgba(0,0,0,0.6)" stroke="#8800ff" stroke-width="1"/>
+  <rect x="202" y="22" width="0" height="12" rx="3" fill="#8800ff">
+    <animate attributeName="width" values="0;146;100;146;50;146" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="245" y="33" font-family="monospace" font-size="9" fill="#fff" text-anchor="middle">NITRO</text>
+
+  <!-- Mini-map -->
+  <rect x="650" y="10" width="80" height="60" rx="4" fill="rgba(0,0,0,0.6)" stroke="#333" stroke-width="1"/>
+  <line x1="654" y1="14" x2="726" y2="14" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+  <line x1="654" y1="66" x2="726" y2="66" stroke="#ff4444" stroke-width="1" opacity="0.3"/>
+  <circle cx="690" cy="40" r="3" fill="#ff0044"/>
+  <circle cx="700" cy="25" r="2" fill="#4488ff">
+    <animate attributeName="cy" values="25;20;25" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Game mode label -->
+  <rect x="270" y="475" width="200" height="20" rx="4" fill="rgba(0,0,0,0.6)"/>
+  <text x="370" y="489" text-anchor="middle" font-family="monospace" font-size="10" fill="#ff6a00" letter-spacing="2">CAREER MODE · LAP 2/3</text>
+</svg>

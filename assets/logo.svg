@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a1a"/>
+      <stop offset="50%" stop-color="#1a0a2e"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <linearGradient id="road" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#333"/>
+      <stop offset="100%" stop-color="#222"/>
+    </linearGradient>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff6a00"/>
+      <stop offset="100%" stop-color="#ee0979"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <text x="400" y="60" text-anchor="middle" font-family="monospace" font-size="36" font-weight="900" fill="url(#neon)" filter="url(#glow)">STREET NITRO</text>
+  <text x="400" y="85" text-anchor="middle" font-family="monospace" font-size="12" fill="#666" letter-spacing="4">HIGH-SPEED ARCADE RACING</text>
+  <text x="400" y="105" text-anchor="middle" font-family="monospace" font-size="10" fill="#444" letter-spacing="2">© FAHAD TECH™</text>
+
+  <rect x="50" y="120" width="700" height="220" rx="10" fill="#111" stroke="#333" stroke-width="1"/>
+  <rect x="50" y="120" width="700" height="220" rx="10" fill="url(#road)" opacity="0.5"/>
+
+  <line x1="80" y1="120" x2="80" y2="340" stroke="#ff6a00" stroke-width="2" opacity="0.3"/>
+  <line x1="720" y1="120" x2="720" y2="340" stroke="#ff6a00" stroke-width="2" opacity="0.3"/>
+  <line x1="400" y1="120" x2="400" y2="340" stroke="#ffdd00" stroke-width="1" stroke-dasharray="8,6" opacity="0.4">
+
+    <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="1s" repeatCount="indefinite"/>
+  </line>
+
+  <rect x="50" y="220" width="700" height="3" fill="#ff4444" opacity="0.3"/>
+  <rect x="50" y="235" width="700" height="3" fill="#ff4444" opacity="0.3"/>
+
+  <g>
+    <rect x="120" y="145" width="60" height="30" rx="6" fill="#ff0000">
+      <animate attributeName="x" from="120" to="660" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="125" y="150" width="50" height="8" rx="2" fill="#222"/>
+    <circle cx="125" cy="178" r="5" fill="#111">
+      <animate attributeName="cx" from="125" to="665" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="175" cy="178" r="5" fill="#111">
+      <animate attributeName="cx" from="175" to="715" dur="4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <rect x="500" y="250" width="60" height="30" rx="6" fill="#0044ff">
+      <animate attributeName="x" from="500" to="100" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="505" y="255" width="50" height="8" rx="2" fill="#222"/>
+    <circle cx="505" cy="283" r="5" fill="#111">
+      <animate attributeName="cx" from="505" to="105" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="555" cy="283" r="5" fill="#111">
+      <animate attributeName="cx" from="555" to="155" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <g>
+    <rect x="300" y="175" width="55" height="28" rx="6" fill="#ffd700">
+      <animate attributeName="x" from="300" to="650" dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="305" cy="206" r="4" fill="#111">
+      <animate attributeName="cx" from="305" to="655" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="206" r="4" fill="#111">
+      <animate attributeName="cx" from="350" to="700" dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="400" y="375" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">25 CARS · 3 TRACKS · 5 GAME MODES · NITRO BOOST · AIR STUNTS</text>
+</svg>
