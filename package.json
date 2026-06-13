@@ -1,0 +1,8 @@
+{
+  "name": "street-nitro",
+  "version": "1.0.0",
+  "description": "Street Nitro 3D arcade racing game",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
