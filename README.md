@@ -66,71 +66,13 @@ Built with Three.js — 60 FPS on mobile devices.</p>
 
 ## 🏎️ CAR CLASSES
 
-```svg
-<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="200" rx="12" fill="#0a0a1a"/>
-  
-  <!-- Supercar -->
-  <rect x="15" y="15" width="145" height="170" rx="8" fill="none" stroke="#ff4444" stroke-width="2"/>
-  <text x="87" y="40" text-anchor="middle" fill="#ff4444" font-size="13" font-weight="bold" font-family="monospace">SUPERCAR</text>
-  <rect x="25" y="50" width="125" height="25" rx="4" fill="#ff0000" opacity="0.6"/>
-  <text x="87" y="67" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">LaFerrari  320</text>
-  <rect x="25" y="80" width="125" height="25" rx="4" fill="#0044ff" opacity="0.6"/>
-  <text x="87" y="97" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Veneno     325</text>
-  <rect x="25" y="110" width="125" height="25" rx="4" fill="#222" opacity="0.6"/>
-  <text x="87" y="127" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Vulcan     310</text>
-  <rect x="25" y="140" width="125" height="25" rx="4" fill="#888" opacity="0.6"/>
-  <text x="87" y="157" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">P1 · 918   315+</text>
-
-  <!-- Hypercar -->
-  <rect x="170" y="15" width="145" height="170" rx="8" fill="none" stroke="#ff8800" stroke-width="2"/>
-  <text x="242" y="40" text-anchor="middle" fill="#ff8800" font-size="13" font-weight="bold" font-family="monospace">HYPERCAR</text>
-  <rect x="180" y="50" width="125" height="25" rx="4" fill="#ff6600" opacity="0.6"/>
-  <text x="242" y="67" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Agera RS   350</text>
-  <rect x="180" y="80" width="125" height="25" rx="4" fill="#8800ff" opacity="0.6"/>
-  <text x="242" y="97" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Huayra     345</text>
-  <rect x="180" y="110" width="125" height="25" rx="4" fill="#00aa00" opacity="0.6"/>
-  <text x="242" y="127" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Veyron     355</text>
-  <rect x="180" y="140" width="125" height="25" rx="4" fill="#0044cc" opacity="0.6"/>
-  <text x="242" y="157" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">M1 · Shelby 280+</text>
-
-  <!-- Muscle -->
-  <rect x="325" y="15" width="145" height="170" rx="8" fill="none" stroke="#4444ff" stroke-width="2"/>
-  <text x="397" y="40" text-anchor="middle" fill="#4444ff" font-size="13" font-weight="bold" font-family="monospace">MUSCLE</text>
-  <rect x="335" y="50" width="125" height="25" rx="4" fill="#111" opacity="0.6"/>
-  <text x="397" y="67" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Challenger  285</text>
-  <rect x="335" y="80" width="125" height="25" rx="4" fill="#888" opacity="0.6"/>
-  <text x="397" y="97" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Camaro      280</text>
-  <rect x="335" y="110" width="125" height="25" rx="4" fill="#cc0000" opacity="0.6"/>
-  <text x="397" y="127" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Mustang GT  282</text>
-  <rect x="335" y="140" width="125" height="25" rx="4" fill="#0044cc" opacity="0.6"/>
-  <text x="397" y="157" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Bullet · Viper 290+</text>
-
-  <!-- Exotic -->
-  <rect x="480" y="15" width="145" height="170" rx="8" fill="none" stroke="#44ff44" stroke-width="2"/>
-  <text x="552" y="40" text-anchor="middle" fill="#44ff44" font-size="13" font-weight="bold" font-family="monospace">EXOTIC</text>
-  <rect x="490" y="50" width="125" height="25" rx="4" fill="#fff" opacity="0.6"/>
-  <text x="552" y="67" text-anchor="middle" fill="#000" font-size="10" font-family="monospace">Evora       290</text>
-  <rect x="490" y="80" width="125" height="25" rx="4" fill="#111" opacity="0.6"/>
-  <text x="552" y="97" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">SLS · 458   300+</text>
-  <rect x="490" y="110" width="125" height="25" rx="4" fill="#0044ff" opacity="0.6"/>
-  <text x="552" y="127" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Huracan     310</text>
-  <rect x="490" y="140" width="125" height="25" rx="4" fill="#888" opacity="0.6"/>
-  <text x="552" y="157" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">R8          308</text>
-
-  <!-- Tuner -->
-  <rect x="635" y="15" width="150" height="170" rx="8" fill="none" stroke="#ff44ff" stroke-width="2"/>
-  <text x="710" y="40" text-anchor="middle" fill="#ff44ff" font-size="13" font-weight="bold" font-family="monospace">TUNER</text>
-  <rect x="645" y="50" width="130" height="25" rx="4" fill="#ff6600" opacity="0.6"/>
-  <text x="710" y="67" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">GT-R         295</text>
-  <rect x="645" y="80" width="130" height="25" rx="4" fill="#8800ff" opacity="0.6"/>
-  <text x="710" y="97" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">RX-7         285</text>
-  <rect x="645" y="110" width="130" height="25" rx="4" fill="#00aa00" opacity="0.6"/>
-  <text x="710" y="127" text-anchor="middle" fill="#fff" font-size="10" font-family="monospace">Impreza      290</text>
-  <rect x="645" y="140" width="130" height="25" rx="4" fill="#ffdd00" opacity="0.6"/>
-  <text x="710" y="157" text-anchor="middle" fill="#000" font-size="10" font-family="monospace">Civic · Lancer 280+</text>
-</svg>
-```
+| Class | Car 1 | Car 2 | Car 3 | Car 4 | Car 5 |
+|-------|-------|-------|-------|-------|-------|
+| 🟥 **Supercar** | LaFerrari 320 | Veneno 325 | Vulcan 310 | McLaren P1 322 | 918 Spyder 315 |
+| 🟧 **Hypercar** | Agera RS 350 | Huayra 345 | Veyron 355 | BMW M1 280 | Shelby GT350R 290 |
+| 🟦 **Muscle** | Challenger SRT 285 | Camaro Z28 280 | Mustang GT 282 | Bullet 290 | Viper 295 |
+| 🟩 **Exotic** | Evora 290 | SLS 300 | Ferrari 458 305 | Huracan 310 | R8 308 |
+| 🟪 **Tuner** | GT-R 295 | RX-7 285 | Impreza 290 | Civic Type R 280 | Lancer 288 |
 
 ## 🗺️ TRACKS
 
@@ -168,29 +110,11 @@ Built with Three.js — 60 FPS on mobile devices.</p>
 
 ## 🚀 NITRO SYSTEM
 
-```svg
-<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg">
-  <rect width="600" height="120" rx="12" fill="#0a0a1a"/>
-  
-  <!-- Level 1 -->
-  <rect x="20" y="20" width="170" height="80" rx="8" fill="none" stroke="#ff6600" stroke-width="2"/>
-  <text x="105" y="45" text-anchor="middle" fill="#ff6600" font-size="18" font-weight="bold" font-family="monospace">LEVEL 1 🟠</text>
-  <text x="105" y="65" text-anchor="middle" fill="#ffaa44" font-size="14" font-family="monospace">1.15x Speed</text>
-  <text x="105" y="82" text-anchor="middle" fill="#888" font-size="11" font-family="monospace">Short whoosh</text>
-
-  <!-- Level 2 -->
-  <rect x="210" y="20" width="170" height="80" rx="8" fill="none" stroke="#4488ff" stroke-width="2"/>
-  <text x="295" y="45" text-anchor="middle" fill="#4488ff" font-size="18" font-weight="bold" font-family="monospace">LEVEL 2 🔵</text>
-  <text x="295" y="65" text-anchor="middle" fill="#66aaff" font-size="14" font-family="monospace">1.30x Speed</text>
-  <text x="295" y="82" text-anchor="middle" fill="#888" font-size="11" font-family="monospace">Medium turbo</text>
-
-  <!-- Level 3 -->
-  <rect x="400" y="20" width="180" height="80" rx="8" fill="none" stroke="#8800ff" stroke-width="2"/>
-  <text x="490" y="45" text-anchor="middle" fill="#8800ff" font-size="18" font-weight="bold" font-family="monospace">LEVEL 3 🟣</text>
-  <text x="490" y="65" text-anchor="middle" fill="#aa44ff" font-size="14" font-family="monospace">1.50x Speed</text>
-  <text x="490" y="82" text-anchor="middle" fill="#888" font-size="11" font-family="monospace">Rocket blast</text>
-</svg>
-```
+| Level | Color | Speed | Sound |
+|-------|-------|-------|-------|
+| Level 1 | 🟠 Orange | 1.15x | Short whoosh |
+| Level 2 | 🔵 Blue | 1.30x | Medium turbo |
+| Level 3 | 🟣 Purple | 1.50x | Rocket blast |
 
 ## 🛠️ UPGRADE SYSTEM
 
