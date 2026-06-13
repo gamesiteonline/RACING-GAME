@@ -9,6 +9,7 @@ import { AudioEngine } from '../audio/AudioEngine.js';
 import { NitroSystem } from '../nitro/NitroSystem.js';
 import { StuntSystem } from '../stunts/StuntSystem.js';
 import { VisualEffects } from '../effects/VisualEffects.js';
+import { AssetLoader } from './AssetLoader.js';
 
 const { Scene, PerspectiveCamera, WebGLRenderer, Color, Fog, AmbientLight, DirectionalLight, ACESFilmicToneMapping } = THREE;
 
@@ -81,6 +82,24 @@ export class Game {
     this.scene.add(dirLight);
 
     this.audio.init();
+
+    const loadingText = document.querySelector('#loading-screen p');
+    if (loadingText) loadingText.textContent = 'Loading 3D models...';
+
+    const assetLoader = new AssetLoader();
+    await assetLoader.loadAll({
+      supercar: 'assets/cars/car_sports.glb',
+      hypercar: 'assets/cars/car_sports.glb',
+      muscle: 'assets/cars/car_police.glb',
+      exotic: 'assets/cars/car_sedan.glb',
+      tuner: 'assets/cars/car_regular.glb',
+    }, (loaded, total) => {
+      if (loadingText) loadingText.textContent = `Loading assets (${loaded}/${total})...`;
+    });
+
+    this.carFactory.setModels(assetLoader.models);
+
+    if (loadingText) loadingText.textContent = 'Building cars...';
 
     this.cars = this.carDefs.getAll().map((def, i) => {
       const car = this.carFactory.create(def, this.scene);
